@@ -1,4 +1,3 @@
-
 (function($){
   /**
    * jQuery.browser.mobile (http://detectmobilebrowser.com/)
@@ -14,9 +13,8 @@
   var ddmenuitem = null;
 
   // jsddm funcs from http://javascript-array.com/scripts/jquery_simple_drop_down_menu/
-  function jsddm_open($this, this_given)
+  function jsddm_open($this)
   {
-    var $this = this_given ? $this : $(this);
     jsddm_canceltimer();
     jsddm_close();
     ddmenuitem = $this.find('ul').css('visibility', 'visible');
@@ -49,7 +47,7 @@
       jsddm_close();
     }
     else {
-      jsddm_open($this, true);
+      jsddm_open($this);
     }
   }
 
@@ -61,7 +59,7 @@
         event.stopPropagation();
       });
       if (!$.browser.mobile){
-        $(this).mouseover(jsddm_open).mouseout(jsddm_timer);
+        $(this).mouseover(function(){ jsddm_open($(this)) }).mouseout(jsddm_timer);
       }
 
     });
