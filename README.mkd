@@ -1,0 +1,1 @@
+make_dropdown is a jQuery plugin that gives you click-based drop down menus when viewed from a mobile device, and hover and click menus otherwise. It is based off of the simple and effective "jsddm" menu by by SpiceBrains http://javascript-array.com/scripts/jquery_simple_drop_down_menu/
