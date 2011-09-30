@@ -1,1 +1,54 @@
-make_dropdown is a jQuery plugin that gives you click-based drop down menus when viewed from a mobile device, and hover and click menus otherwise. It is based off of the simple and effective "jsddm" menu by by SpiceBrains http://javascript-array.com/scripts/jquery_simple_drop_down_menu/
+# make_dropdown #
+make_dropdown is a jQuery plugin that gives you click-based drop down menus when viewed from a mobile device, and hover and click menus otherwise. It is based off of the simple and effective ["jsddm"](http://javascript-array.com/scripts/jquery_simple_drop_down_menu/) menu by by SpiceBrains.
+
+### [VIEW THE DEMO](http://suan.github.com/make_dropdown) ###
+
+## Usage ##
+[Download the plugin](http://lala)
+
+Copy the make_dropdown-x.x.min.js file into a folder of your choice and include it in your project, for example:
+
+```html
+<script src="js/plugins/make_dropdown.min.js" type="text/javascript"></script>
+```
+
+You need to use an unordered list structure as your menu, like so:
+
+```html
+<ul id="menubar">
+  <li><a href="#">Michael</a>
+    <ul>
+      <li><a href="#">Jordan</a></li>
+      <li><a href="#">Jackson</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Stooges</a>
+    <ul>
+      <li><a href="#">1st</a></li>
+      <li><a href="#">2nd</a></li>
+      <li><a href="#">3rd</a></li>
+    </ul>
+  </li>
+  <li><a href="#">I have no menu children</a></li>
+</ul>
+```
+
+(You can replace #menubar with any other id or class, as long as your jQuery selector in the next step is restrictive enough)
+
+Finally, call `make_dropdown()` on each of the top level menu items:
+
+```javascript
+$(document).ready(function(){ $('#menubar > li').make_dropdown(); });
+```
+
+## Features and Non-features ##
+
+## Requirements ##
+- jQuery 1.4+
+
+## Browser Compatibility ##
+
+### (Real-life usage example)[http://suanaikyeo.com] ###
+
+## Issues ##
+If you find something wrong, please report it at the project's issues page. If you don't have and don't want to create a github account, you could email me instead.
