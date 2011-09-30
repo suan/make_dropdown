@@ -14,37 +14,32 @@
   var ddmenuitem = null;
 
   // jsddm funcs from http://javascript-array.com/scripts/jquery_simple_drop_down_menu/
-  function jsddm_open($this, this_given)
-  {
+  function jsddm_open($this, this_given) {
     var $this = this_given ? $this : $(this);
     jsddm_canceltimer();
     jsddm_close();
     ddmenuitem = $this.find('ul').css('visibility', 'visible');
   }
 
-  function jsddm_close()
-  {
+  function jsddm_close() {
     if(ddmenuitem){
       ddmenuitem.css('visibility', 'hidden');
       ddmenuitem = null;
     }
   }
 
-  function jsddm_timer()
-  { 
+  function jsddm_timer() { 
     closetimer = window.setTimeout(jsddm_close, timeout);
   }
 
-  function jsddm_canceltimer()
-  { 
+  function jsddm_canceltimer() { 
     if(closetimer)
     {  window.clearTimeout(closetimer);
        closetimer = null;
     }
   }
 
-  function jsddm_toggle($this)
-  {
+  function jsddm_toggle($this) {
     if (ddmenuitem && $this.has(ddmenuitem[0]).length){
       jsddm_close();
     }
