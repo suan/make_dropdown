@@ -1,15 +1,15 @@
 # make_dropdown #
 make_dropdown is a jQuery plugin that gives you click-based drop down menus when viewed from a mobile device, and hover and click menus otherwise. It is based off of the simple and effective ["jsddm"](http://javascript-array.com/scripts/jquery_simple_drop_down_menu/) menu by by SpiceBrains.
 
-### [VIEW THE DEMO](http://suan.github.com/make_dropdown) ###
+### [VIEW THE DEMO](http://suan.github.com/make_dropdown/demo.html) ###
 
 ## Usage ##
 [Download the plugin](http://lala)
 
-Copy the make_dropdown-x.x.min.js file into a folder of your choice and include it in your project, for example:
+Copy the make_dropdown.js file into a folder of your choice and include it in your project, for example:
 
 ```html
-<script src="js/plugins/make_dropdown.min.js" type="text/javascript"></script>
+<script src="js/plugins/make_dropdown.js" type="text/javascript"></script>
 ```
 
 You need to use an unordered list structure as your menu, like so:
@@ -41,12 +41,23 @@ Finally, call `make_dropdown()` on each of the top level menu items:
 $(document).ready(function(){ $('#menubar > li').make_dropdown(); });
 ```
 
-## Features and Non-features ##
+To not be oversensitive to mouse movements, menus by default take 500 milliseconds to disappear. You can change this duration by passing in the new millisecond value like so:
+
+```javascript
+$('#menubar > li').make_dropdown({'timeout' : 250});
+```
+
+To view a complete example, along with how you might style your drop down menu, view the source of demo.html.
 
 ## Requirements ##
 - jQuery 1.4+
 
 ## Browser Compatibility ##
+The compatibility list of the original project was:
+
+IE6+, Firefox 1.5+, Opera 8+, Safari 3+, Chrome 0.2+
+
+I'd like to think that my changes haven't broken behavior on any of the above browsers, but the browsers I have concretely tested are Firefox and Chrome.
 
 ### (Real-life usage example)[http://suanaikyeo.com] ###
 
