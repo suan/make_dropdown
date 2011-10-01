@@ -4,12 +4,15 @@ make_dropdown is a jQuery plugin that gives you click-based drop down menus when
 ### [VIEW THE DEMO](http://suan.github.com/make_dropdown/demo.html) ###
 
 ## Usage ##
-[Download the plugin](http://lala)
+Download the plugin:
 
-Copy the make_dropdown.js file into a folder of your choice and include it in your project, for example:
+- [.zip format](https://github.com/suan/make_dropdown/zipball/master)
+- [.tar.gz format](https://github.com/suan/make_dropdown/tarball/master)
+
+Copy the make_dropdown.min.js file into a folder of your choice and include it in your project, for example:
 
 ```html
-<script src="js/plugins/make_dropdown.js" type="text/javascript"></script>
+<script src="js/plugins/make_dropdown.min.js" type="text/javascript"></script>
 ```
 
 You need to use an unordered list structure as your menu, like so:
@@ -47,19 +50,18 @@ To not be oversensitive to mouse movements, menus by default take 500 millisecon
 $('#menubar > li').make_dropdown({'timeout' : 250});
 ```
 
-To view a complete example, along with how you might style your drop down menu, view the source of demo.html.
+**To view a complete example, along with how you might style your drop down menu, view the source of demo.html.**
 
 ## Requirements ##
 - jQuery 1.4+
 
 ## Browser Compatibility ##
-The compatibility list of the original project was:
-
+The compatibility list of the original project was:<br/>
 IE6+, Firefox 1.5+, Opera 8+, Safari 3+, Chrome 0.2+
 
 I'd like to think that my changes haven't broken behavior on any of the above browsers, but the browsers I have concretely tested are Firefox and Chrome.
 
-### (Real-life usage example)[http://suanaikyeo.com] ###
+## [Real-life usage example](http://suanaikyeo.com) ##
 
 ## Issues ##
 If you find something wrong, please report it at the project's issues page. If you don't have and don't want to create a github account, you could email me instead.
