@@ -38,6 +38,52 @@ You need to use an unordered list structure as your menu, like so:
 
 (You can replace #menubar with any other id or class, as long as your jQuery selector in the next step is restrictive enough)
 
+Your css should look something like this:
+
+```css
+#menubar
+{ margin: 0;
+  padding: 0}
+
+  #menubar li
+  { float: left;
+    list-style: none;
+    font: 12px Tahoma, Arial}
+
+  #menubar li a
+  { display: block;
+    background: #324143;
+    padding: 5px 12px;
+    text-decoration: none;
+    border-right: 1px solid white;
+    width: 70px;
+    color: #EAFFED;
+    white-space: nowrap}
+
+  #menubar li a:hover
+  { background: #24313C}
+
+    #menubar li ul
+    { margin: 0;
+      padding: 0;
+      position: absolute;
+      visibility: hidden;
+      border-top: 1px solid white}
+
+      #menubar li ul li
+      { float: none;
+        display: inline}
+
+      #menubar li ul li a
+      { width: auto;
+        background: #A9C251;
+        color: #24313C}
+
+      #menubar li ul li a:hover
+      { background: #8EA344}
+
+```
+
 Finally, call `make_dropdown()` on each of the top level menu items:
 
 ```javascript
@@ -50,7 +96,7 @@ To not be oversensitive to mouse movements, menus by default take 500 millisecon
 $('#menubar > li').make_dropdown({'timeout' : 250});
 ```
 
-**To view a complete example, along with how you might style your drop down menu, view the source of demo.html.**
+**To see a complete example, view the source of demo.html.**
 
 ## Requirements ##
 - jQuery 1.4+
