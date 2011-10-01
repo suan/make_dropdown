@@ -46,8 +46,13 @@
     }
   }
 
-  $.fn.make_dropdown = function(){
+  $.fn.make_dropdown = function(options){
+
     return this.each(function(){
+
+      if (options && options['timeout']){
+        timeout = options['timeout'];
+      }
 
       $(this).click(function(event){
         jsddm_toggle($(this));
