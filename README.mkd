@@ -111,3 +111,7 @@ I'd like to think that my changes haven't broken behavior on any of the above br
 
 ## Issues ##
 If you find something wrong or want to request a feature, please use the project's [issues page](https://github.com/suan/make_dropdown/issues). If you don't have and don't want to create a github account, you could [email me](mailto:yoesuanaik@gmail.com) instead.
+
+License
+-------
+BSD (See LICENSE.txt)
