@@ -38,7 +38,7 @@ You need to use an unordered list structure as your menu, like so:
 
 (You can replace #menubar with any other id or class, as long as your jQuery selector in the next step is restrictive enough)
 
-Your css should look something like this:
+Your css should look something like this **(please note the `visibility: hidden` requirement)**:
 
 ```css
 #menubar
@@ -67,7 +67,8 @@ Your css should look something like this:
     { margin: 0;
       padding: 0;
       position: absolute;
-      visibility: hidden;
+      visibility: hidden;   /* IMPORTANT!! This property needs to be present for the plugin to work! And no, */
+                            /* display:none will NOT do! */
       border-top: 1px solid white}
 
       #menubar li ul li
